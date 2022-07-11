@@ -42,7 +42,7 @@ private Random mRandom;
     }
     public void display(View view){
 
-        mCurrentIndex = mRandom.nextInt(mWalkingPirectures.lenghth);
+        mCurrentIndex = mRandom.nextInt(mWalkingPirectures.lenght);
         showImage();
     }
     public void next(View view){
