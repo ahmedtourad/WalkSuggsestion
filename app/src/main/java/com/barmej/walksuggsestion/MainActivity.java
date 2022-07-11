@@ -33,7 +33,7 @@ private Random mRandom;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRandom = new Random();
+        mRandom = new Random(mWalkingPirectures.length);
         imageWalking = findViewById(R.id.imageView);
     }
     public void showImage(){
@@ -42,7 +42,7 @@ private Random mRandom;
     }
     public void display(View view){
 
-        mCurrentIndex = mRandom.nextInt(10);
+        mCurrentIndex = mRandom.nextInt(mWalkingPirectures.lenghth);
         showImage();
     }
     public void next(View view){
