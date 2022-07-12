@@ -46,7 +46,7 @@ private Random mRandom;
         showImage();
     }
     public void next(View view){
-        if(mCurrentIndex < 10) {
+        if(mCurrentIndex < mWalkingPirectures.lenght) {
             mCurrentIndex++;
             showImage();
         }else{
@@ -56,7 +56,7 @@ private Random mRandom;
     }
     public void pevrious(View view){
         if(mCurrentIndex ==0) {
-            mCurrentIndex=9;
+            mCurrentIndex=mWalkingPirectures.lenght;
             showImage();
         }else{
             --mCurrentIndex;
