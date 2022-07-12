@@ -26,7 +26,7 @@ int[] mWalkingPirectures = {
 
 
 };
-int mCurrentIndex = -1;
+int mCurrentIndex = 0;
 ImageView imageWalking;
 private Random mRandom;
     @Override
@@ -42,21 +42,21 @@ private Random mRandom;
     }
     public void display(View view){
 
-        mCurrentIndex = mRandom.nextInt(mWalkingPirectures.lenght);
+        mCurrentIndex = mRandom.nextInt(mWalkingPirectures.lenght-1);
         showImage();
     }
     public void next(View view){
-        if(mCurrentIndex < mWalkingPirectures.lenght) {
+        if(mCurrentIndex < mWalkingPirectures.lenght -1) {
             mCurrentIndex++;
             showImage();
         }else{
-            mCurrentIndex = -1;
+            mCurrentIndex = 0;
             showImage();
         }
     }
     public void pevrious(View view){
         if(mCurrentIndex ==0) {
-            mCurrentIndex=mWalkingPirectures.lenght;
+            mCurrentIndex=mWalkingPirectures.lenght-1;
             showImage();
         }else{
             --mCurrentIndex;
