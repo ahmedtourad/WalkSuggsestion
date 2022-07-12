@@ -26,7 +26,7 @@ int[] mWalkingPirectures = {
 
 
 };
-int mCurrentIndex = 0;
+int mCurrentIndex = -1;
 ImageView imageWalking;
 private Random mRandom;
     @Override
@@ -50,7 +50,7 @@ private Random mRandom;
             mCurrentIndex++;
             showImage();
         }else{
-            mCurrentIndex = 0;
+            mCurrentIndex = -1;
             showImage();
         }
     }
